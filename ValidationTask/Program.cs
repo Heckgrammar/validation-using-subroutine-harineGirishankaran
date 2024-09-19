@@ -30,12 +30,31 @@
         }
         static bool ValidName(string name)
         {
+            int i = 0;
+            bool result = name.All(Char.IsLetter);
+            if (name.Length -1 != i && result == true)
+                {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
             // name must be at least two characters and contain only letters
         }
 
         static bool validAge(int age)
         {
             //age must be between 11 and 18 inclusive
+            age = Convert.ToInt32(age);
+            if (age <= 18 && age >= 11)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
 
@@ -62,6 +81,14 @@
         }
         static bool validEmail(string email)
         {
+            if ((email.Contains("@") || (email.Contains("t") || (email.Contains("?")))))
+            {
+            Console.WriteLine(email);
+            }
+            else
+            {
+            Console.WriteLine("Invalid");
+            }
             // a valid email address
             // has at least 2 characters followed by an @ symbol
             // has at least 2 characters followed by a .
@@ -72,15 +99,17 @@
         }
         static string createUserName(string firstName, string lastName, int age)
         {
-            // username is made up from:
-            // first two characters of first name
-            // last two characters of last name
-            // age
-            //e.g. Bob Smith aged 34 would have the username Both34
+           
+              
+                // username is made up from:
+                // first two characters of first name
+                // last two characters of last name
+                // age
+                //e.g. Bob Smith aged 34 would have the username Both34
 
 
 
-        }
+            }
 
     }
 }
