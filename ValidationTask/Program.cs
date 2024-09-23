@@ -7,7 +7,7 @@
             string firstName, lastName, username, password, emailAddress;
             int age;
 
-            // Get user input with validation
+             // Get user input with validation
             {
                 Console.Write("Enter first name: ");
                 firstName = Console.ReadLine();
