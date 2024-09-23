@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             string firstName, lastName, username, password, emailAddress;
-            int age;
+             int age;
 
              // Get user input with validation
             {
