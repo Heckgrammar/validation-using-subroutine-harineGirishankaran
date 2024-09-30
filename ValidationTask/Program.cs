@@ -68,13 +68,15 @@
             static bool ValidName(string name)
             {
                 // Name must be at least two characters and contain only letters
-                
+                return !string.IsNullOrWhiteSpace(name) && name.All(char.IsLetter) && name.Length >= 2;
+
             }
 
             static bool ValidAge(int age)
             {
+                return age >= 11 && age <= 18;
                 // Age must be between 11 and 18 inclusive
-                
+
             }
 
             static bool ValidPassword(string password)
